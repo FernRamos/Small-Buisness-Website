@@ -207,3 +207,39 @@ body.dark .btn-primary {
 body.dark .btn-primary:hover {
   background: #0077cc;
 }
+/* === Hamburger Button (mobile nav toggle) === */
+#menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--clr-text);
+}
+/* Mobile Styles */
+@media (max-width: 768px) {
+  #menu-toggle {
+    display: block;
+  }
+
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    background: var(--clr-light);
+    position: absolute;
+    top: 100%;
+    right: 1rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-list.show {
+    display: flex;
+  }
+
+  nav {
+    position: relative;
+  }
+}
