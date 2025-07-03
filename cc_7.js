@@ -47,9 +47,12 @@ form.addEventListener("submit", event => {
 const toggleBtn = document.getElementById("menu-toggle");
 const navList = document.querySelector(".nav-list");
 
-toggleBtn.addEventListener("click", () => {
-  navList.classList.toggle("show");
-});
+toggleBtn.addEventListener("click", () => navList.classList.toggle("show"));
+
+// Close menu once a link is chosen
+document.querySelectorAll('.nav-list a').forEach(link =>
+  link.addEventListener('click', () => navList.classList.remove('show'))
+);
 /* ---------- 6. Share Button (native + fallback) ---------- */
 const shareBtn = document.getElementById("share-btn");
 
@@ -63,7 +66,8 @@ if (navigator.share) {
         text: "Check out this awesome small-business landing page!",
         url: window.location.href
       });
-    } catch {
+    } catch (e) {
+      return;
     }
   });
 } else {
