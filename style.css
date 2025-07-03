@@ -103,6 +103,9 @@ header {
 .nav-share:focus {
   color: var(--clr-primary);
 }
+.hamburger {
+  display: none;
+}
 
 /* === Hero === */
 .hero {
@@ -200,12 +203,13 @@ footer a {
     flex-direction: column;
     background: var(--clr-light);
     position: absolute;
-    top: 100%;
-    right: 1rem;
+    top: 100%;left: 0;             
+    width: 100%;          
     padding: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 0.5rem;
+    background: var(--clr-light);
+    border-top: 1px solid #ccc;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
   }
 
   .nav-list.show {
