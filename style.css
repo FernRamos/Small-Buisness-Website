@@ -121,6 +121,24 @@ header {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
+/* === Form Section === */
+.form-section form {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.form-section input {
+  flex: 1 1 240px;
+  padding: 0.65rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+.form-section input:focus {
+  outline: 2px solid var(--clr-primary);
+}
+
 /* === Footer === */
 footer {
   background: #111;
