@@ -30,16 +30,16 @@ $("#cta-btn").addEventListener("click", () => {
 
 /* ---------- 4. Step 5: update hero headline via form ---------- */
 // Grab the elements
-const headlineInput = document.getElementById("headline-input");   // <input>
-const updateBtn     = document.querySelector("#cta-form button");  // <button>
-const heroHeadline  = document.getElementById("hero-title");       // <h2>
+const form          = document.getElementById("cta-form");       // <form>
+const headlineInput = document.getElementById("headline-input"); // <input>
+const heroHeadline  = document.getElementById("hero-title");     // <h2>
 
-// Replace <h2> text on click
-updateBtn.addEventListener("click", event => {
-  event.preventDefault();                     // stop form reload
+// Replace <h2> text on submit (works for Enter key & button click)
+form.addEventListener("submit", event => {
+  event.preventDefault();                       // prevent page reload
   const text = headlineInput.value.trim();
   if (text) {
-    heroHeadline.textContent = text;
-    headlineInput.value = "";                 // clear field
+    heroHeadline.textContent = text;            // update headline
+    headlineInput.value = "";                   // clear field
   }
 });
