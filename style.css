@@ -242,6 +242,7 @@ footer a {
     font-size: 1.5rem;
   }
 }
+/* === Dark Mode Styling === */
 body.dark {
   background: #111;
   color: #eee;
@@ -249,17 +250,62 @@ body.dark {
 
 body.dark header,
 body.dark .service,
-body.dark footer {
+body.dark footer,
+body.dark .form-section,
+body.dark .hero,
+body.dark .nav-list {
   background: #222;
   color: #f1f1f1;
 }
 
+/* Hero headline and paragraph */
+body.dark .hero h2,
+body.dark .hero p {
+  color: #f1f1f1;
+}
+
+/* Navigation links */
+body.dark .nav-list a,
+body.dark .nav-share {
+  color: #f1f1f1;
+}
+
+body.dark .nav-list a:hover,
+body.dark .nav-share:hover {
+  color: var(--clr-primary);
+}
+
+/* Input field styling */
+body.dark input {
+  background: #333;
+  color: #f1f1f1;
+  border: 1px solid #555;
+}
+
+body.dark input:focus {
+  outline: 2px solid #0099ff;
+}
+
+/* CTA and toggle buttons */
 body.dark .btn-primary {
   background: #0099ff;
+  color: #fff;
 }
 
 body.dark .btn-primary:hover {
   background: #0077cc;
+}
+
+/* Transition for smooth theme switching */
+body,
+.hero,
+header,
+footer,
+.service,
+.form-section,
+input,
+.nav-list {
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 /* Fix hero title from being cut off on mobile */

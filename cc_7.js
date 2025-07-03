@@ -47,12 +47,11 @@ form.addEventListener("submit", event => {
 const toggleBtn = document.getElementById("menu-toggle");
 const navList = document.querySelector(".nav-list");
 
-toggleBtn.addEventListener("click", () => navList.classList.toggle("show"));
-
-// Close menu once a link is chosen
-document.querySelectorAll('.nav-list a').forEach(link =>
-  link.addEventListener('click', () => navList.classList.remove('show'))
+toggleBtn.addEventListener('click', () => navList.classList.toggle('show'));
+navList.querySelectorAll('a').forEach(link =>
+    link.addEventListener('click', () => navList.classList.remove('show'))
 );
+
 /* ---------- 6. Share Button (native + fallback) ---------- */
 const shareBtn = document.getElementById("share-btn");
 
