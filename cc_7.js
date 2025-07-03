@@ -43,7 +43,7 @@ form.addEventListener("submit", event => {
     headlineInput.value = "";                   // clear field
   }
 });
-  // === Mobile Nav Toggle ===
+// === Mobile Nav Toggle ===
 const toggleBtn = document.getElementById("menu-toggle");
 const navList = document.querySelector(".nav-list");
 
@@ -53,8 +53,9 @@ toggleBtn.addEventListener("click", () => {
 /* ---------- 6. Share Button (native + fallback) ---------- */
 const shareBtn = document.getElementById("share-btn");
 
+if (shareBtn) { 
 if (navigator.share) {
-  // Native share (mobile & some desktops)
+  // Native share
   shareBtn.addEventListener("click", async () => {
     try {
       await navigator.share({
@@ -62,24 +63,21 @@ if (navigator.share) {
         text: "Check out this awesome small-business landing page!",
         url: window.location.href
       });
-    } catch (err) {
-      console.error("Share cancelled or failed:", err);
+    } catch {
     }
   });
 } else {
-  // Fallback → copy link to clipboard
   shareBtn.textContent = "📋 Copy Link";
-
   shareBtn.addEventListener("click", async () => {
     try {
       await navigator.clipboard.writeText(window.location.href);
-      // quick feedback
       const original = shareBtn.textContent;
       shareBtn.textContent = "✅ Link Copied!";
       setTimeout(() => (shareBtn.textContent = original), 2000);
-    } catch (err) {
+    } catch {
       // Older browsers without Clipboard API → prompt fallback
       prompt("Copy this link:", window.location.href);
     }
   });
+}
 }
