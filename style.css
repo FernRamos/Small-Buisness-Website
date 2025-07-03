@@ -103,7 +103,8 @@ header {
 .nav-share:focus {
   color: var(--clr-primary);
 }
-.hamburger {
+.hamburger,
+#menu-toggle {
   display: none;
 }
 
@@ -203,7 +204,8 @@ footer a {
     flex-direction: column;
     background: var(--clr-light);
     position: absolute;
-    top: 100%;left: 0;             
+    top: 100%;
+    right: 0;             
     width: 100%;          
     padding: 1rem;
     background: var(--clr-light);
@@ -220,21 +222,19 @@ footer a {
     position: relative;
   }
 
-  #menu-toggle {
-    display: block;
-    position: absolute;
-    right: 1rem;
-    top: 1rem;
-    z-index: 1001;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
-    color: var(--clr-text);
-  }
-  .section-heading {
-    font-size: 1.5rem;
-  }
+.hamburger,
+#menu-toggle {
+  display: block;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  z-index: 1001;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--clr-text);
+}
 }
 body.dark {
   background: #111;
