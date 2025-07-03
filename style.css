@@ -263,3 +263,24 @@ body.dark .btn-primary:hover {
     position: relative;
   }
 }
+/* ===================  MOBILE TWEAKS  =================== */
+@media (max-width: 768px) {
+  /* Place hamburger top-right */
+  #menu-toggle {
+    display: block;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    z-index: 1001;
+  }
+  .nav-list {
+    background: var(--clr-light);
+  }
+}
+
+/* Fix hero title from being cut off on mobile */
+.hero h2 {
+  font-size: clamp(1.5rem, 6vw, 2.5rem);
+  white-space: normal;
+  overflow: visible;
+}
