@@ -36,7 +36,8 @@ html, body {
   font-size: 1.75rem;
 }
 .service-heading {
-  margin-bottom: 3rem; /* More space below the heading */
+  margin-top: 2rem;       /* Add space above heading */
+  margin-bottom: 3.5rem;  /* More space between heading and cards */
 }
 .btn-primary {
   background: var(--clr-primary);
@@ -106,7 +107,7 @@ header {
 .services-section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  gap: 2.5rem;
   padding: 3rem 0;
 }
 .service {
