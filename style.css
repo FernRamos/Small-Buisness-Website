@@ -70,11 +70,11 @@ header {
   font-size: clamp(1.2rem, 4vw, 1.6rem); 
   font-weight: bold;
   color: var(--clr-primary);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 80%;
-}                        
+  max-width: 100%;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+}                       
 
 .nav-list {
   display: flex;
