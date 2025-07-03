@@ -197,11 +197,11 @@ footer a {
   .flex-between {
     flex-direction: column;
     align-items: flex-start;
+    position: relative;
   }
 
   nav {
-    position: relative;
-    margin-left: auto; /* This pushes nav (and the menu) to the right */
+    width: 100%
   }
 
   .nav-list {
@@ -210,7 +210,6 @@ footer a {
     position: absolute;
     top: 100%;
     right: 0;
-    left: auto;
     width: 200px;
     padding: 1rem;
     background: var(--clr-light);
@@ -230,7 +229,7 @@ footer a {
     position: absolute;
     right: 1rem;
     top: 1rem;
-    z-index: 1001;
+    z-index: 10000;
     background: none;
     border: none;
     font-size: 2rem;
