@@ -84,6 +84,20 @@ header {
 .nav-list a:hover {
   color: var(--clr-primary);
 }
+.nav-share {
+  background: none;
+  border: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-share:hover,
+.nav-share:focus {
+  color: var(--clr-primary);
+}
 
 /* === Hero === */
 .hero {
