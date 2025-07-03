@@ -35,6 +35,9 @@ html, body {
   margin: 3rem 0 2.5rem;
   font-size: 1.75rem;
 }
+.service-heading {
+  margin-bottom: 3rem; /* More space below the heading */
+}
 .btn-primary {
   background: var(--clr-primary);
   color: var(--clr-light);
